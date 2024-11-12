@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/welcome")
-class BalanceController  {
+@RequestMapping("/balance")
+class BalanceController {
     @GetMapping
-    fun balance(): String = "Welcome to Spring Application with security"
+    fun balance(): String = "Here are the balance details from the DB"
 }

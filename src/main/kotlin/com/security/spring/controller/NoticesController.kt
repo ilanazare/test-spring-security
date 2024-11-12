@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/welcome")
-class NoticesController  {
+@RequestMapping("/notices")
+class NoticesController {
     @GetMapping
-    fun notices(): String = "Welcome to Spring Application with security"
+    fun notices(): String = "Here are the notices details from the DB"
 }

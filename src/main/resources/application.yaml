@@ -3,8 +3,8 @@ server:
 spring:
   security:
     user:
-      name: gold
-      password: gold&pay
+      name: ${SECURITY_USERNAME:gold}
+      password: ${SECURITY_PASSWORD:gold&pay}
   application:
     name: challenge-crud-pix
   datasource:

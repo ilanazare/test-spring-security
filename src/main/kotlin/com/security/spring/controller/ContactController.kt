@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/welcome")
-class WelcomeController {
+class ContactController  {
     @GetMapping
-    fun welcome(): String = "Welcome to Spring Application with security"
+    fun contact(): String = "Welcome to Spring Application with security"
 }

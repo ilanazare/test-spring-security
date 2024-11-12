@@ -15,9 +15,22 @@ class SecurityConfig {
         http
             .authorizeHttpRequests { authorize ->
                 authorize
-                    .requestMatchers("/accounts", "/balance", "/loans", "/cards")
-                    .authenticated()
-                    .requestMatchers("/notices", "/contact", "/error")
+                    .requestMatchers(
+                        "/v2/api-docs",
+                        "/configuration/ui",
+                        "/swagger-resources/**",
+                        "/configuration/security",
+                        "/swagger-ui.html/**",
+                        "/webjars/**",
+                    ).authenticated()
+                    .requestMatchers(
+                        "/customer",
+                        "/accounts",
+                        "/balance",
+                        "/loans",
+                        "/cards",
+                    ).authenticated()
+                    .requestMatchers("/notices", "/contact")
                     .permitAll()
             }.formLogin(withDefaults())
             .formLogin(withDefaults())

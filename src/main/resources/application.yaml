@@ -7,6 +7,13 @@ spring:
       password: ${SECURITY_PASSWORD:gold&pay}
   application:
     name: challenge-crud-pix
+  logging:
+    level:
+      org:
+        springframework:
+          security: ${SPRING_SECURITY_LOG_LEVEL:TRACE}
+    pattern:
+      console: ${LOG_PATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
   datasource:
     url: jdbc:mysql://localhost:3306/db
     username: root

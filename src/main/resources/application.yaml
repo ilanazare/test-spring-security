@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  security:
+    user:
+      name: gold
+      password: gold&pay
+  application:
+    name: challenge-crud-pix
+  datasource:
+    url: jdbc:mysql://localhost:3306/db
+    username: root
+    password: gold&pay
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
